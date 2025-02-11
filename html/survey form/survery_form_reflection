@@ -1,0 +1,1 @@
+When I looked at the reference image of the task, I was confused with the border effect that I saw on some inputs. I thought it was a familiar HTML tag so I searched the internet to find out what tag is it. Turns out it was the <fieldset> tag.
