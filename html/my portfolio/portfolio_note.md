@@ -1,0 +1,1 @@
+This task took me about 45 minutes. The only challenge I faced was finding a way to follow the wireframe as close as possible without using <div> and <br> tags which was necessary to create divisions between the elements so they are not all inline.
