@@ -1,0 +1,1 @@
+Because I had previous experience with using Flexbox before, this task only took me less than 10 minutes to finish. The provided HTML code is also structured very well so applying the correct styling was easy. I only had to manipulate the display property of the main element.
