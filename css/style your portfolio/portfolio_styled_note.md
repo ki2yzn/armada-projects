@@ -1,0 +1,1 @@
+This task took me 2 hours to finish. The challenging part in this task is learning to use gradient as background color and properly styling the table. 

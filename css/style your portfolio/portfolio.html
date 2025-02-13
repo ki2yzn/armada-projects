@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to my Portfolio</h1>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="#about-me">About Me</a>
+				</li>
+				<li>
+					<a href="#my-projects">Projects</a>
+				</li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+				<li>
+					<a href="https://github.com/edwin-sal" target="_blank">My Github</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<hr>
+
+	<main>
+		<section id="about-me">
+			<h2>About Me</h2>
+			<p class="about-me-text">I am Edwin! I am a 4th year student at Tarlac State University and an aspiring web developer that aims to develop useful things through the Web! </p>
+
+			<img 
+				src="./banner.jpg" 
+				alt="Programming banner"
+				class="img-banner"
+			>
+		</section>
+
+		<hr>
+
+		<section id="my-projects">
+			<h2>My Projects</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Project Name</th>
+						<th>Description</th>
+						<th>Year</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Vshop Armory</td>
+						<td>A simple product page for E-commerce</td>
+						<td>2024</td>
+					</tr>
+					<tr>
+						<td>Pokemon Guessing Game</td>
+						<td>A pokemon guessing game using PokeAPI</td>
+						<td>2024</td>
+					</tr>
+					<tr>
+						<td>TicTacToe</td>
+						<td>A TicTacToe with unbeatable opponent</td>
+						<td>2023</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<hr>
+
+		<section id="contact">
+			<h2>Contact Me</h2>
+
+			<form>
+				<label for="full-name" style="display: block;">
+					Full Name
+					<input type="text" class="dark-input full-name" name="full-name" id="full-name">
+				</label>
+				
+
+				<label for="email-address" style="display: block;">
+					Email Address
+					<input type="email" class="dark-input email-address" name="email-address" id="email-address">
+				</label>
+				
+
+				<fieldset>
+					<legend>How did you find out about this portfolio?</legend>
+					
+					<label for="friend">
+						<input type="radio" name="find-out" id="friend">
+						Friend
+					</label>
+					
+					<label for="social-media">
+						<input type="radio" name="find-out" id="social-media">
+						Social Media
+					</label>
+					
+					<label for="search-engine">
+						<input type="radio" name="find-out" id="search-engine">
+						Search Engine
+					</label>
+					
+					<label for="other">
+						<input type="radio" name="find-out" id="other">
+						Other
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Skills/Interest</legend>
+
+					<label for="web-development">
+						<input type="checkbox" name="web-development" id="web-development">
+						Web Development
+					</label>
+
+					<label for="design">
+						<input type="checkbox" name="design" id="design">
+						Design
+					</label>
+
+					<label for="photography">
+						<input type="checkbox" name="photography" id="photography">
+						Photography
+					</label>
+
+					<label for="gaming">
+						<input type="checkbox" name="gaming" id="gaming">
+						Gaming
+					</label>
+				</fieldset>
+
+				<label for="comments">Comments/Messages</label>
+				<textarea class="dark-input" name="comments" id="comments"></textarea>
+
+				<div class="submit-container">  
+					<input class="submit-button" type="submit" value="Submit">
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<hr>
+
+	<footer>
+		<p>© Edwin Bañago 2025</p>
+	</footer>
+</body>
+</html>
