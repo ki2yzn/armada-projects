@@ -7,20 +7,19 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>My To-Do List</h1>
-	</header>
-
 	<main>
-		<form onsubmit="return false;">
-			<input id="task-name-input" type="text" class="task-name-input" name="task-name-input" placeholder="Enter your task here...">
+		<h1>My To-Do List</h1>
 
-			<input id="add-task" type="submit" class="add-task" onclick="addTask()" value="Add Task">
+		<form onsubmit="handleSubmit(event)">
+			<input type="text" class="task-name-input" id="task-name-input" name="task-name-input" placeholder="Enter your task here...">
+
+			<input type="submit" class="add-task" id="add-task" value="Add Task">
 		</form>
 
-		<div id="tasks-container" class="tasks-container"></div>
+		<ul class="tasks-container" id="tasks-container">
+		</ul>
 	</main>
 
-	<script src="./script.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
