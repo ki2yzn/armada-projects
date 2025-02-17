@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 400;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 700;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 800;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 900;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Netflix Sans';
+	background-color: black;
+}
+
+.bg-image {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	filter: brightness(20%);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding: 0 200px;
+	height: 10vh;
+}
+
+header img {
+	width: 180px;
+	margin-right: auto;
+}
+
+select,
+header a {
+	font-family: inherit;
+	border-radius: 5px;
+	font-size: 0.9rem;
+	font-weight: 300;
+	padding: 6px;
+}
+
+select {
+	background-color: transparent;
+	color: white;
+	width: 123px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+select option {
+	color: black;
+}
+
+header a {
+	text-align: center;
+	vertical-align:middle;
+	padding: 8px 20px;
+}
+
+.top-section {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1,
+.top-section p {
+	color: white;
+}
+
+h1 {
+	font-size: 3.5rem;
+	width: 600px;
+	text-align: center;
+	font-weight: 900;
+	line-height: 1.2;
+	margin-bottom: 16px;
+}
+
+.top-section p:nth-of-type(1) {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+
+.top-section p:nth-of-type(2) {
+	margin-bottom: 16px;
+}
+
+.top-section form,
+footer form {
+	display: flex;
+	gap: 10px;
+}
+
+.email-input,
+.submit-button {
+	font-family: inherit;
+	color: white;
+	border-radius: 5px;
+}
+
+.email-input {
+	padding: 15px;
+	font-family: inherit;
+	font-size: 1rem;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid gray;
+	width: 320px;
+}
+
+.submit-button {
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 1.5rem;
+	padding: 15px 30px;
+	width: 230px;
+	text-align: center;
+}
+
+.trending-section,
+.reasons-section,
+footer {
+	padding: 0 150px;
+	color: white;
+}
+
+.trending-section h2,
+.reasons-section h2 {
+	margin: 24px 0;
+}
+
+ul {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+	padding-left: 24px;
+	list-style: none;
+}
+
+ul li {
+	flex: 1;
+}
+
+ul li a img {
+	border-radius: 10px;
+	transition: 0.5s ease;
+	width: 100%;
+}
+
+ul li a img:hover {
+	transform: scale(1.1);
+}
+
+ul button {
+	color: white;
+	background-color: #1a1a1a;
+	height: 100%;
+	border: none;
+	font-family: inherit;
+	height: 100px;
+	padding: 6px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+ul button:hover {
+	background-color: #333333;
+}
+
+.reasons-section h2 {
+	margin-bottom: 10px;
+}
+
+.reasons-container {
+	display: flex;
+	gap: 16px;
+}
+
+.reasons-container article {
+	flex: 1;
+	background-color: #192247;
+	padding: 24px 16px;
+	border-radius: 15px;
+	height: 300px;
+}
+
+.reasons-container article h3 {
+	margin-bottom: 24px;
+	font-size: 1.25rem;
+}
+
+.reasons-container article p {
+	color: #ffffffb3;
+}
+
+footer {
+	margin: 280px 0 100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer p {
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+footer .email-input {
+	width: 640px;
+}
+
+/* Generic styling */
+.red-button {
+	background-color: #e50914;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.red-button:hover {
+	background-color: #c11119;
+}
