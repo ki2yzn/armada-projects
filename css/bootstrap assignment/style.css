@@ -1,0 +1,152 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+	height: 100dvh;
+	background-color: #212529;
+}
+
+header {
+	background-color: #6f2cf4;
+	display: flex;
+	padding: 15px 80px;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	list-style: none;
+}
+
+nav li a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.header-logo {
+	height: 35px;
+}
+
+.search-bar {
+	background-color: #6327db;
+	color: white;
+	outline: none;
+	border: 1px solid darkgray;
+	font-family: inherit;
+	padding: 10px;
+	border-radius: 5px;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.search-bar::placeholder {
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-logo {
+	width: 200px;
+	margin: 40px 0 15px 0;
+}
+
+h1, 
+h3,
+h4 {
+	width: 680px;
+	text-align: center;
+}
+
+h1 {
+	color: whitesmoke;
+	font-size: 3rem;
+}
+
+h3 {
+	color: #dee2e6bf;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	margin: 20px 0;
+}
+
+.docs-container {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.npm, 
+.docs-link {
+	padding: 20px 30px;
+	border-radius: 5px;
+	color: whitesmoke;
+}
+
+.npm {
+	background-color: #303337;
+	border: 1px solid grey;
+	padding-right: 50px;
+}
+
+.docs-link {
+	background-color: #712cf9;
+	color: whitesmoke;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.version-container {
+	display: flex;
+	gap: 10px;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.version-container li,
+.version-container li a  {
+	color: #6c757d;	
+}
+
+#current-version {
+	color: #dee2e6bf;
+}
+
+.arrow-icon {
+	color: #6e2cf3;
+	background-color: #29253f;
+	font-size: 2rem;
+	padding: 15px;
+	border-radius: 15px;
+	margin: 20px 0;
+}
+
+h2 {
+	color: whitesmoke;
+	font-size: 2.5rem;
+}
+
+h4 {
+	color: #dee2e6bf;
+	font-weight: 500;
+	font-size: 1.25rem;
+	margin: 20px 0;
+}
+
+.guide-link {
+	color: #6ea8fe;
+	font-weight: 600;
+	font-size: 1.25rem;
+}

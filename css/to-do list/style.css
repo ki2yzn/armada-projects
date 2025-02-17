@@ -8,79 +8,72 @@
 
 body {
 	background-color: #f4f4f9;
-	font-family: "Poppins", serif;
+	font-family: 'Poppins';
 	height: 100dvh;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-}
-
-header, main {
-	background-color: white;
-	width: 480px;
-}
-
-header {
-	border-radius: 10px 10px 0 0;
-	padding: 40px 20px 0 20px;
-	cursor: default;
+	justify-content: center;
 }
 
 main {
-	padding: 0 20px 40px 20px;
-	border-radius: 0 0 10px 10px;
+	background-color: white;
+	width: 480px;
+	padding: 40px 20px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	border-radius: 10px;
+}
+
+h1,
+.add-task {
+	background-color: #0078d4;
+	color: white;
 }
 
 h1 {
-	background-color: #0078d4;
-	color: white;
-	text-align: center;
 	padding: 5px;
+	text-align: center;
 	border-radius: 5px;
 }
 
 form {
-	display: flex;
 	margin: 20px 0;
+	display: flex;
 }
 
-input {
-	font-size: 1rem;
-	font-family: "Poppins", serif;
+.task-name-input,
+.add-task {
+	font-family: inherit;
+	padding: 10px;
 }
 
 .task-name-input {
 	outline: none;
-	padding: 10px;
 	border: 1px solid #dddddd;
-	border-right: 0px ;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 0 0 5px;
 	width: 100%;
 }
 
 .add-task {
 	cursor: pointer;
-	background-color: #0078d4;
-	color: white;
+	outline: none;
 	border: none;
-	font-weight: 500;
-	padding: 10px 20px;
 	border-radius: 0 5px 5px 0;
+	padding: 0 30px;
 }
 
-.tasks-container {
+ul {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.task {
-	background-color: #dbeef4;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
+ul li {
+	list-style: none;
 	text-align: center;
+	background-color: #dbeef4;
 	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #dddddd;
 }
 
 .complete {

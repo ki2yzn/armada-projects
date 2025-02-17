@@ -1,0 +1,1 @@
+This task took me 1 and a half hour to finish. The main challenge I faced is doing the actual layout. I contemplated wether to use flexbox or not. Additionally getting the colors and sizes accurate is also tricky but I was able to get it as similar to the reference image as much as possible.
