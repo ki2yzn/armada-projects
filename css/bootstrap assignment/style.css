@@ -63,8 +63,8 @@ main {
 }
 
 h1, 
-h3,
-h4 {
+.description,
+.cdn-text {
 	width: 680px;
 	text-align: center;
 }
@@ -74,7 +74,7 @@ h1 {
 	font-size: 3rem;
 }
 
-h3 {
+.description {
 	color: #dee2e6bf;
 	font-weight: 500;
 	font-size: 1.5rem;
@@ -130,7 +130,7 @@ h3 {
 	font-size: 2rem;
 	padding: 15px;
 	border-radius: 15px;
-	margin: 20px 0;
+	margin: 40px 0 20px 0;
 }
 
 h2 {
@@ -138,7 +138,7 @@ h2 {
 	font-size: 2.5rem;
 }
 
-h4 {
+.cdn-text {
 	color: #dee2e6bf;
 	font-weight: 500;
 	font-size: 1.25rem;
@@ -149,4 +149,5 @@ h4 {
 	color: #6ea8fe;
 	font-weight: 600;
 	font-size: 1.25rem;
+	margin-bottom: 100px;
 }

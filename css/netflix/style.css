@@ -52,7 +52,7 @@ body {
 header {
 	display: flex;
 	align-items: center;
-	padding: 0 200px;
+	padding: 0 150px;
 	height: 10vh;
 }
 
