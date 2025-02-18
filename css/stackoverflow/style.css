@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Noto Sans", serif;
+	height: 100dvh;
+}
+
+/* START OF HEADER */
+
+header {
+	border-top: 3px solid #e7700d;
+	border-bottom: 1px solid lightgray;
+	padding: 10px 80px;
+	width: 100%;
+
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background-color: white;
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+}
+
+.header-nav-list {
+	display: flex;
+	list-style: none;
+	margin: 0 10px;
+}
+
+.header-nav-list a {
+	text-decoration: none;
+	color: #636b74;
+	padding: 6px 12px;
+	font-weight: 400;
+}
+
+.header-nav-list a:hover {
+	background-color: #e3e6e8;
+	border-radius: 20px;
+}
+
+.header-nav form {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.search-bar {
+	padding: 7.8px 7.8px 7.8px 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.search-bar:focus {
+	outline: 2px solid #1b75d0;
+}
+
+.header-nav .login-link,
+.header-nav .signup-btn,
+.top-section .signup-btn {
+	font-family: inherit;
+	height: 36px;
+	padding: 8px 10.4px;
+	border-radius: 5px;
+}
+
+.header-nav .login-link {
+	color: #1b75d0;
+	border: 1px solid #1b75d0;
+	display: inline;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	margin-right: 5px;
+}
+/* END OF HEADER */
+
+
+
+/* START OF SIDEBAR */
+.page-column-wrapper {
+	display: flex;
+	position: relative;
+}
+
+.sidebar {
+	padding: 30px 30px 0 80px;
+}
+
+.sidebar-nav-list {
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+	width: 164px;
+}
+
+.sidebar-nav-list li:nth-child(4) {
+	margin-top: 30px;
+}
+
+.sidebar-nav-list li:nth-child(5) {
+	margin-bottom: 30px;
+}
+
+
+.sidebar-nav-list li,
+.sidebar-nav-list p {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-left: 8px;
+}
+
+.sidebar-nav-list li:hover {
+	background-color: #f1f2f3;
+	border-radius: 5px;
+}
+
+.sidebar-nav-list a {
+	text-decoration: none;
+	width: 100%;
+	color: #3b4045;
+	padding: 8px;
+}
+/* END OF SIDEBAR */
+
+
+
+/* START OF MAIN */
+main {
+	overflow: hidden;
+	padding-right: 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.services h2,
+.work-here h2 {
+	font-size: 19px;
+	color: #3b4045;
+	font-weight: 400;
+}
+
+/* START OF TOP SECTION */
+
+
+.top-section {
+	background-color: #f9fafa;
+	padding: 48px;
+	position: relative;
+	border-radius: 0 0 10px 10px;
+}
+
+h1,
+.top-section p {
+	width: 50%;
+	color: #3b4045;
+}
+
+h1 {
+	font-family: "Roboto Slab", serif;
+	font-size: 34px;
+}
+
+.developer-container {
+	display: inline;
+	position: relative;
+}
+
+.developer-container span {
+	position: relative;
+	z-index: 2;
+	color: white;
+	margin: 0 20px;
+}
+
+.developer-container img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	translate:  -50%;
+	width: 197px;
+}
+
+.top-section p,
+.top-section a {
+	font-weight: 400;
+}
+
+.top-section p {
+	margin: 20px 0;
+	font-size: 17px;
+}
+
+.top-section a {
+	color: #1b75d0;
+	text-decoration: none;
+	font-size: 13px;
+	margin-left: 15px;
+}
+
+.top-section .hero {
+	position: absolute;
+	width: 445px;
+	right: 48px;
+	bottom: 0;
+}
+/* END OF TOP SECTION */
+
+
+/* START OF SERVICES */
+.services {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+article {
+	border: 1px solid lightgray;
+	padding: 32px;
+	border-radius: 10px;
+}
+
+.services article a {
+	font-size: 13px;
+}
+
+article h3 {
+	font-size: 17px;
+	font-weight: 400;
+	color: #0c0d0e;
+	margin: 10px 0 24px 0;
+}
+
+.screenshot {
+	width: 442.5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.so-for-teams,
+.so-overflow-ai,
+.so-work-here {
+	position: relative;
+}
+
+.so-for-teams h3,
+.so-work-here h3 {
+	width: 50%;
+}
+
+.so-for-teams a:nth-of-type(2),
+.so-advertising a:nth-of-type(2) {
+	color: #1b75d0;
+}
+
+.so-overflow-ai {
+	background-color: #3b4045;
+}
+
+.so-overflow-ai h3 {
+	width: 60%;
+}
+
+.so-overflow-ai .logo {
+	width: 177px;
+}
+
+.services .so-overflow-ai h3 {
+	color: white;
+}
+
+.so-overflow-ai a {
+	color: white;
+	text-decoration: none;
+	background-color: #e7700d;
+	padding: 6px 12px;
+	border-radius: 5px;
+}
+
+.so-overflow-ai a:hover {
+	background-color: #c45f0e;
+}
+
+.services-two-column {
+	display: flex;
+	gap: 24px;
+}
+
+.services-two-column article {
+	flex: 1;
+}
+
+.work-here {
+	margin-bottom: 80px;
+}
+
+.work-here h2 {
+	margin-bottom: 30px;
+}
+
+.so-work-here .screenshot {
+	width: 500px;
+}
+
+/* END OF SERVICES */
+
+
+/* END OF MAIN */
+
+
+
+
+/* Generic styling */
+.logo {
+	width: 150px;
+}
+
+header,
+.sidebar {
+	font-size: 13px;
+}
+
+.blue-btn {
+	background-color: #1b75d0;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.blue-btn:hover {
+	background-color: #155ca2;
+}
+
+.service-button-link {
+	padding: 6px 12px;
+	border-radius: 5px;
+	text-decoration: none;
+	margin-right: 16px;
+	font-size: 13px;
+}
+
