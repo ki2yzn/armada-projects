@@ -18,7 +18,7 @@ body {
 header {
 	border-top: 3px solid #e7700d;
 	border-bottom: 1px solid lightgray;
-	padding: 10px 80px;
+	padding: 10px 300px;
 	width: 100%;
 
 	position: sticky;
@@ -95,7 +95,7 @@ header {
 }
 
 .sidebar {
-	padding: 30px 30px 0 80px;
+	padding: 30px 30px 0 300px;
 }
 
 .sidebar-nav-list {
@@ -118,7 +118,6 @@ header {
 .sidebar-nav-list p {
 	display: flex;
 	align-items: center;
-	gap: 10px;
 	padding-left: 8px;
 }
 
@@ -140,7 +139,7 @@ header {
 /* START OF MAIN */
 main {
 	overflow: hidden;
-	padding-right: 80px;
+	padding-right: 300px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -353,3 +352,6 @@ header,
 	font-size: 13px;
 }
 
+.bold {
+	font-weight: 800;
+}
