@@ -73,6 +73,7 @@ header {
 	list-style: none;
 	font-family: inherit;
 	gap: 16px;
+	align-items: center;
 }	
 
 .header-list select,
@@ -200,9 +201,15 @@ h1 {
 
 .top-rated-games-container .wrapper {
 	padding: 16px 16px 32px 16px;
-	display: flex;
+	/* display: flex; */
 	flex-direction: column;
 	gap: 16px;
+}
+
+.top-rated-games-container h2,
+.top-rated-games-container p,
+.top-rated-games-container .mini-title {
+	padding: 0 16px;
 }
 
 .trending-developers-container {
@@ -281,6 +288,7 @@ h1 {
 
 .collection-container {
 	padding: 16px;
+	margin-top: 24px;
 }
 
 .game-engine-wrapper {
