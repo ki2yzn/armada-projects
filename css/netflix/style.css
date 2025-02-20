@@ -110,10 +110,17 @@ h1 {
 	margin-bottom: 16px;
 }
 
+.top-section p {
+	text-align: center;
+	color: whitesmoke;
+	font-weight: 400;
+}
+
 .top-section p:nth-of-type(1) {
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin-bottom: 32px;
+	
 }
 
 .top-section p:nth-of-type(2) {
@@ -261,4 +268,102 @@ footer .email-input {
 
 .red-button:hover {
 	background-color: #c11119;
+}
+
+@media (max-width: 1023px) {
+	header {
+		padding: 0 50px;
+	}
+
+	.top-section {
+		padding: 0 50px;
+	}
+
+	.trending-section,
+	.reasons-section,
+	footer {
+		padding: 0 25px;
+	}
+
+	ul {
+		gap: 16px;
+	}
+
+	.reasons-container {
+		flex-direction: column;
+	}
+
+	footer {
+		margin-bottom: 50px;
+	}
+
+	footer form,
+	.top-section form {
+		width: 100%;
+	}
+
+	footer .email-input,
+	.top-section form .email-input {
+		flex: 1;
+	}
+}
+
+@media (max-width: 640px) {
+	header img {
+		width: 120px;
+	}
+
+	h1 {
+		font-size: 2rem;
+		width: 100%;
+	}
+
+	header,
+	.trending-section,
+	.reasons-section,
+	footer {
+		padding: 0 20px;
+	}
+
+	header select {
+		padding: 3px;
+	}
+
+	header a {
+		padding: 6px 20px;
+	}
+
+	.top-section p:nth-of-type(1) {
+		font-size: 16px;
+	}
+
+	.top-section p {
+		font-size: 16px;
+		width: 80%;
+	}
+
+	.submit-button {
+		font-size: 1rem;
+		width: 120px;
+		padding: 15px;
+	}
+
+	.trending-section ul li:nth-of-type(3) {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.top-section form {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.trending-section ul li:nth-of-type(4) {
+		display: none;
+	}
+
+	.reasons-container article h3 {
+		font-size: 20px;
+	}
 }
