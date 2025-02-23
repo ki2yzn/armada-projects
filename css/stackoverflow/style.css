@@ -155,16 +155,25 @@ main {
 /* START OF TOP SECTION */
 
 
-.top-section {
+.top-section,
+.so-for-teams,
+.so-overflow-ai,
+.so-work-here {
 	background-color: #f9fafa;
-	padding: 48px;
-	position: relative;
 	border-radius: 0 0 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.content {
+	padding: 45px 0 45px 32px;
+	width: 50%;
+	align-self: center;
 }
 
 h1,
 .top-section p {
-	width: 50%;
 	color: #3b4045;
 }
 
@@ -211,10 +220,7 @@ h1 {
 }
 
 .top-section .hero {
-	position: absolute;
 	width: 445px;
-	right: 48px;
-	bottom: 0;
 }
 /* END OF TOP SECTION */
 
@@ -228,9 +234,10 @@ h1 {
 
 article {
 	border: 1px solid lightgray;
-	padding: 32px;
 	border-radius: 10px;
 }
+
+
 
 .services article a {
 	font-size: 13px;
@@ -245,20 +252,6 @@ article h3 {
 
 .screenshot {
 	width: 442.5px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-.so-for-teams,
-.so-overflow-ai,
-.so-work-here {
-	position: relative;
-}
-
-.so-for-teams h3,
-.so-work-here h3 {
-	width: 50%;
 }
 
 .so-for-teams a:nth-of-type(2),
@@ -301,6 +294,15 @@ article h3 {
 
 .services-two-column article {
 	flex: 1;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.services-two-column article h3 {
+	margin: 0;
+	margin-bottom: auto;
 }
 
 .work-here {
@@ -354,4 +356,18 @@ header,
 
 .bold {
 	font-weight: 800;
+}
+
+/* Tablet screens */
+@media (min-width: 481px) and (max-width: 1023px) {
+	header,
+	.sidebar,
+	main {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.header-nav-list li:not(:nth-child(2)) {
+		display: none;
+	}
 }
