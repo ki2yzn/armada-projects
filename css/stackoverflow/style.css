@@ -37,6 +37,7 @@ header {
 	background-color: transparent;
 	border: none;
 	margin-right: 8px;
+	display: none;
 }
 
 .mini-logo {
@@ -387,22 +388,8 @@ header,
 	font-weight: 800;
 }
 
-/* Tablet screens */
-@media (min-width: 481px) and (max-width: 1023px) {
-	header,
-	.sidebar {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	main {
-		padding: 0 10px 50px 0;
-	}
-
-	.header-nav-list li:not(:nth-child(2)) {
-		display: none;
-	}
-
+/* Fix layout of images to prevent them from breaking */
+@media (max-width: 1500px) {
 	.top-section,
 	.so-for-teams,
 	.so-overflow-ai,
@@ -423,15 +410,6 @@ header,
 		height: auto;
 	}
 
-	.services {
-		gap: 16px;
-	}
-
-	.services h2 {
-		text-align: center;
-		margin-bottom: 24px;
-	}
-
 	.services .screenshot {
 		align-self: flex-end;
 		width: 99%;
@@ -441,6 +419,32 @@ header,
 	.services-two-column {
 		flex-direction: column;
 		gap: 16px;
+	}
+}
+
+/* Tablet screens */
+@media (min-width: 481px) and (max-width: 1023px) {
+	header,
+	.sidebar {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	main {
+		padding: 0 10px 50px 0;
+	}
+
+	.header-nav-list li:not(:nth-child(2)) {
+		display: none;
+	}
+
+	.services {
+		gap: 16px;
+	}
+
+	.services h2 {
+		text-align: center;
+		margin-bottom: 24px;
 	}
 
 	.so-overflow-ai h3 {
@@ -455,6 +459,10 @@ header,
 @media (max-width: 480px) {
 	header {
 		padding: 8px 16px;
+	}
+
+	.header-nav-button {
+		display: block;
 	}
 
 	.header-nav .logo {
@@ -490,40 +498,9 @@ header,
 		padding: 0 13px 50px 13px;
 	}
 
-	.top-section,
-	.so-for-teams,
-	.so-overflow-ai,
-	.so-work-here {
-		align-items: flex-start;
-		flex-direction: column;
-	}
-
-	.content {
-		align-self: flex-start;
-		width: 100%;
-		padding-right: 32px;
-	}
-
-	.top-section .hero {
-		align-self: center;
-		width: 80%;
-		height: auto;
-	}
-
 	.services h2 {
 		text-align: center;
 		/* margin-bottom: 24px; */
-	}
-
-	.services .screenshot {
-		align-self: flex-end;
-		width: 99%;
-		height: auto;
-	}
-
-	.services-two-column {
-		flex-direction: column;
-		gap: 16px;
 	}
 
 	.so-overflow-ai h3 {
