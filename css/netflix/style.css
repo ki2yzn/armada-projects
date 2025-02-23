@@ -354,6 +354,10 @@ footer .email-input {
 }
 
 @media (max-width: 480px) {
+	body {
+		overflow: hidden;
+	}
+
 	.top-section form {
 		flex-direction: column;
 		align-items: center;
