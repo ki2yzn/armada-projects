@@ -55,6 +55,14 @@ header {
 	margin-right: 10px;
 }
 
+.search-button {
+	width: 18px;
+	height: 18px;
+	background-color: transparent;
+	border: none;
+	display: none;
+}
+
 .search-bar {
 	padding: 7.8px 7.8px 7.8px 30px;
 	border: 1px solid lightgray;
@@ -153,14 +161,15 @@ main {
 }
 
 /* START OF TOP SECTION */
-
+.top-section {
+	border-radius: 0 0 10px 10px;
+	background-color: #f9fafa;
+}
 
 .top-section,
 .so-for-teams,
 .so-overflow-ai,
 .so-work-here {
-	background-color: #f9fafa;
-	border-radius: 0 0 10px 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -292,6 +301,10 @@ article h3 {
 	gap: 24px;
 }
 
+.services-two-column a {
+	width: fit-content;
+}
+
 .services-two-column article {
 	flex: 1;
 	padding: 32px;
@@ -307,6 +320,10 @@ article h3 {
 
 .work-here {
 	margin-bottom: 80px;
+}
+
+.so-work-here {
+	background-color: #ffffff;
 }
 
 .work-here h2 {
@@ -361,13 +378,64 @@ header,
 /* Tablet screens */
 @media (min-width: 481px) and (max-width: 1023px) {
 	header,
-	.sidebar,
+	.sidebar {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 	main {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding: 0 10px 50px 0;
 	}
 
 	.header-nav-list li:not(:nth-child(2)) {
+		display: none;
+	}
+
+	.top-section,
+	.so-for-teams,
+	.so-overflow-ai,
+	.so-work-here {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.content {
+		align-self: flex-start;
+		width: 100%;
+		padding-right: 32px;
+	}
+
+	.top-section .hero {
+		align-self: center;
+		width: 80%;
+		height: auto;
+	}
+
+	.services {
+		gap: 16px;
+	}
+
+	.services h2 {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	.services .screenshot {
+		align-self: flex-end;
+		width: 99%;
+		height: auto;
+	}
+
+	.services-two-column {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.so-overflow-ai h3 {
+		width: 100%;
+	}
+
+	.work-here {
 		display: none;
 	}
 }
