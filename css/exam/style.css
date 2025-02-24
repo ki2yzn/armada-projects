@@ -221,6 +221,10 @@ section h2 {
 	font-weight: 600;
 }
 
+.guarantees-container {
+	padding: 50px 36px;
+}
+
 .guarantees-container ul {
 	display: flex;
 	list-style: none;
@@ -280,6 +284,10 @@ footer p {
 		display: none;
 	}
 
+	.categories-container h2 {
+		margin: 50px 0 24px 0;
+	}
+
 	.exclusive-container ul {
 		flex-wrap: wrap;
 	}
@@ -308,7 +316,6 @@ footer p {
 	.categories-card-container {
 		width: fit-content;
 		flex-wrap: wrap;
-		/* justify-content: space-around; */
 	}
 
 	.categories-card-container li {
