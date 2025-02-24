@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", serif;
+	overflow-x: hidden;
+}
+
+header {
+	background-color: #002056;
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	padding: 20px;
+}
+
+.main-logo {
+	width: 170px;
+}
+
+header a,
+header button,
+.search-bar input {
+	font-family: inherit;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+.search-bar {
+	flex: 1;
+	display: flex;
+	align-items: stretch;
+	height: fit-content;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.search-bar input {
+	width: 100%;
+	font-size: 1rem;
+	padding: 15px 15px;
+	outline: none;
+	border: none;
+}
+
+.search-bar button {
+	padding: 0 15px;
+	background-color: #f17d21;
+	border: none;
+}
+
+.search-bar button img {
+	width: 20px;
+}
+
+.cart-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	color: white;
+	font-size: 1rem;
+	border-left: 1px solid #7a7a7a;
+	border-right: 1px solid #7a7a7a;
+	padding: 0 24px;
+}
+
+.cart-button img {
+	width: 1.5rem;
+}
