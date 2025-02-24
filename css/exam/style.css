@@ -24,9 +24,11 @@ header {
 }
 
 header a,
-header button,
-.search-bar input {
+button,
+.search-bar input,
+select {
 	font-family: inherit;
+	font-size: 1rem;
 }
 
 header a {
@@ -77,4 +79,23 @@ header a {
 
 .cart-button img {
 	width: 1.5rem;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	padding: 20px;
+	gap: 2rem;
+}
+
+
+nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+nav ul li select {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
