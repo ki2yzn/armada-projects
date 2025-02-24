@@ -23,6 +23,10 @@ header {
 	width: 170px;
 }
 
+.mini-logo {
+	display: none;
+}
+
 header a,
 button,
 .search-bar input,
@@ -91,6 +95,7 @@ section {
 
 nav ul {
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	padding: 20px 36px;
 	gap: 2rem;
@@ -123,6 +128,7 @@ section h2 {
 }
 
 .categories-card-container {
+	gap: 20px;
 	display: flex;
 	list-style: none;
 	justify-content: space-between;
@@ -156,6 +162,7 @@ section h2 {
 	gap: 20px;
 	list-style: none;
 	background-color: white;
+	width: fit-content;
 }
 
 .exclusive-container li {
@@ -220,13 +227,15 @@ section h2 {
 	justify-content: space-between;
 	max-width: 1500px;
 	margin: 0 auto;
+	flex-wrap: wrap;
 }
 
 .guarantees-container li {
 	display: flex;
 	align-items: flex-start;
 	gap: 16px;
-	max-width: 250px;
+	min-width: 250px;
+	max-width: 300px;
 }
 
 .guarantee-content h3,
@@ -246,4 +255,83 @@ footer p {
 	color: white;
 	text-align: center;
 	padding: 50px;
+}
+
+@media (max-width: 1138px) {
+	.price-container {
+		flex-direction: column;
+	}
+}
+
+/* Tablet screens */
+@media (min-width: 481px) and (max-width: 1023px) {
+	header :nth-child(3),
+	.cart-button span,
+	.price-container {
+		display: none;
+	}
+
+	.cart-button {
+		border: none;
+		padding: 0;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.exclusive-container ul {
+		flex-wrap: wrap;
+	}
+
+	.exclusive-container h2 {
+		margin-bottom: 3rem;
+	}
+
+	.exclusive-container li {
+		min-width: 250px;
+		height: 400px;
+	}
+
+	.guarantees-container {
+		margin-top: 3rem;
+		max-width: 900px;
+	}
+
+	.guarantees-container li {
+		margin: 24px 0;
+	}
+}
+
+/* Flex-Wrap the categories container */
+@media (max-width: 800px) {
+	.categories-card-container {
+		width: fit-content;
+		flex-wrap: wrap;
+		/* justify-content: space-around; */
+	}
+
+	.categories-card-container li {
+		max-width: 120px;
+	}
+
+	.exclusive-container ul {
+		justify-content: center;
+	}
+}
+
+/* Make the sm logo responsive */
+@media (max-width: 600px) {
+	.main-logo {
+		display: none;
+	}
+
+	header {
+		gap: 10px;
+	}
+
+	.mini-logo {
+		width: 50px;
+		display: block;
+	}
 }
