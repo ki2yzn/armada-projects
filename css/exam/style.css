@@ -16,7 +16,7 @@ header {
 	display: flex;
 	gap: 24px;
 	align-items: center;
-	padding: 20px;
+	padding: 20px 36px;
 }
 
 .main-logo {
@@ -86,13 +86,13 @@ main {
 }
 
 section {
-	padding: 20px;
+	padding: 20px 36px;
 }
 
 nav ul {
 	display: flex;
 	list-style: none;
-	padding: 20px;
+	padding: 20px 36px;
 	gap: 2rem;
 }
 
@@ -129,11 +129,13 @@ section h2 {
 }
 
 .categories-card-container img {
-	max-width: 190px;
+	width: 100%;
+	height: auto;
 	border-radius: 50%;
 }
 
 .categories-card-container li a {
+	max-width: 190px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -150,14 +152,19 @@ section h2 {
 
 .exclusive-container ul {
 	display: flex;
+	justify-content: space-between;
 	gap: 20px;
 	list-style: none;
 	background-color: white;
 }
 
-.exclusive-container ul li {
+.exclusive-container li {
 	flex: 1;
-	padding: 1rem;
+	padding: 1rem 1rem 2.5rem 1rem;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	height: 480px;
 }
 
 .exclusive-container a {
@@ -171,7 +178,9 @@ section h2 {
 }
 
 .exclusive-container img {
-	max-width: 215px;
+	width: 100%;
+	height: auto;
+	max-height: 250px;
 }
 
 .exclusive-container h3 {
@@ -183,7 +192,7 @@ section h2 {
 }
 
 .price-container {
-	margin-top: 3rem;
+	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -205,10 +214,6 @@ section h2 {
 	font-weight: 600;
 }
 
-/* .guarantees-container {
-	display: flex;
-} */
-
 .guarantees-container ul {
 	display: flex;
 	list-style: none;
@@ -221,6 +226,7 @@ section h2 {
 	display: flex;
 	align-items: flex-start;
 	gap: 16px;
+	max-width: 250px;
 }
 
 .guarantee-content h3,
