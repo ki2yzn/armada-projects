@@ -14,7 +14,7 @@ function task1() {
 	let doubled = customMap(numbers, function(num) { return num * 2; });
 	console.log(doubled); // Should output: [2,4,6]
 }
-// task1();
+task1();
 
 
 
@@ -33,7 +33,7 @@ function task2() {
 	let result = filter([1,2,3,4,15], function(val) { return val < 10; });
 	console.log(result); // Should output: [1,2,3,4]
 };
-// task2();
+task2();
 
 
 
@@ -50,7 +50,7 @@ function task3() {
 	let result = some([1,2,3,4], function(val) { return val>5; });
 	console.log(result); 
 };
-// task3();
+task3();
 
 
 
@@ -67,7 +67,7 @@ function task4() {
 	let result = every([1,2,3], function(val) { return val>0; });
 	console.log(result); // Should output: true
 };
-// task4();
+task4();
 
 
 
@@ -85,7 +85,7 @@ function task5() {
 	let sum = reduce([1,2,3], function(acc, num) { return acc + num; });
 	console.log(sum); // Should output: 6
 };
-// task5();
+task5();
 
 
 
@@ -102,4 +102,4 @@ function task6() {
 	let result = includes([1,2,3], function(val) { return val===2; });
 	console.log(result); // Should output: true
 };
-// task6();
+task6();
