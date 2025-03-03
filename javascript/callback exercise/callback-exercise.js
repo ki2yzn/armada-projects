@@ -44,16 +44,6 @@ delayedMessage("Hello, world!", 2000, function(msg) {
 
 
 // Exercise 3
-document.getElementById("clickMe").addEventListener("click", function () {
-    alert("Button clicked!");
-});
-
-document.getElementById('logButton').addEventListener('mouseover', function () {
-	console.error("Don't hover!");
-})
-
-
-
 function repeatTask(times, callback) {
     for (let i = 0; i < times; i++) {
         if(callback(i) === false) {
@@ -64,4 +54,5 @@ function repeatTask(times, callback) {
 
 repeatTask(3, function(index) {
     console.log("Iteration:", index);
+    return false;
 });
