@@ -30,8 +30,10 @@ main {
 }
 
 .profile-card img {
+	border-radius: 50%;
 	max-width: 120px;
-	height: auto;
+	height: 120px;
+	object-fit: cover;
 }
 
 form {
