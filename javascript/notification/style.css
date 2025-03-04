@@ -36,7 +36,7 @@ button {
 	padding: 10px;
 }
 
-#notification {
+.notification {
 	display: flex;
 	justify-content: space-between;
 	background-color: #e0f7fb;
@@ -44,7 +44,7 @@ button {
 	padding: 10px;
 }
 
-#notification button {
+.notification button {
 	font-family: inherit;
 	font-weight: 600;
 	background-color: transparent;
@@ -52,6 +52,6 @@ button {
 	color: maroon;
 }
 
-#notification button:hover {
+.notification button:hover {
 	color: red;
 }
