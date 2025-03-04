@@ -8,29 +8,31 @@
 </head>
 <body>
 	<main>
-		<section class="profile-card">
-			<img src="./images/shrek.jpg" alt="Profile image">
-			<h2>Edwin</h2>
-			<p>Biogesic</p>
+		<section id="profile-card">
+			<img id="user-profile-picture" src="./images/shrek.jpg" alt="Profile image">
+			<h2 id="user-name">Edwin</h2>
+			<p id="user-bio">Biogesic</p>
 		</section>
 
-		<form>
+		<form id="update-form">
 			<label for="update-name">Update Name:</label>
 			<input type="text" id="update-name">
-			<button>Update Name</button>
+			<button onclick="updateInfo('update-name', 'user-name', 'name')">Update Name</button>
 
 			<label for="update-bio">Update Bio:</label>
 			<input type="text" id="update-bio">
-			<button>Update Bio</button>
+			<button onclick="updateInfo('update-bio', 'user-bio', 'bio')">Update Bio</button>
 
 			<label for="update-image-url">Update Image URL:</label>
 			<input type="text" id="update-image-url">
-			<button>Update Image</button>
+			<button onclick="updateImage()">Update Image</button>
 
-			<label for="background-color">Update Background Color:</label>
-			<input type="color" id="background-color">
-			<button>Update Background Color</button>
+			<label for="update-background-color">Update Background Color:</label>
+			<input type="color" id="update-background-color">
+			<button onclick="updateBackgroundColor()">Update Background Color</button>
 		</form>
 	</main>
+
+	<script src="./script.js"></script>
 </body>
 </html>

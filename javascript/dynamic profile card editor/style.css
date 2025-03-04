@@ -17,7 +17,7 @@ main {
 	max-width: 500px;
 }
 
-.profile-card {
+#profile-card {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	border-radius: 10px;
 	overflow: hidden;
@@ -25,15 +25,19 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
-	padding: 1.5rem 0;
+	padding: 1.5rem;
 	margin-bottom: 1rem;
 }
 
-.profile-card img {
+#profile-card img {
 	border-radius: 50%;
 	max-width: 120px;
 	height: 120px;
 	object-fit: cover;
+}
+
+#profile-card h2 {
+	text-align: center;
 }
 
 form {
