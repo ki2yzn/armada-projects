@@ -18,6 +18,27 @@ function showNotification(content, result) {
 	notificationElement.style.color = result === 'success' ? 'green' : 'red'; 
 };
 
+// Add transaction to the transaction history list
+function addTransaction(value, mode) {
+	// Get the transaction history element
+	const transactionHistory = document.getElementById('history-list');
+
+	// Create the transaction element
+	const transaction = document.createElement('li');
+	transaction.className = 'transaction';
+	transaction.innerText = `${mode === 'deposit' ? 'Deposit' : 'Withdraw'}: $${value}`; 
+
+	// Insert the transaction to the list.
+	// If history is empty, use appendChild. Otherwise, use insertBefore so latest transactions stay on top of the list.
+	if(!transactionHistory.innerText) {
+		transactionHistory.appendChild(transaction);
+	} else {
+		const reference = document.querySelector('.transaction');
+		console.log(reference);
+		transactionHistory.insertBefore(transaction, reference);
+	}
+};
+
 // Deposit value by incrementing the balance 
 function doTransaction(mode) {
 	// Get the value of the cash input
@@ -52,13 +73,17 @@ function doTransaction(mode) {
 
 		default:
 			console.log('Invalid mode!');
+			return;
 	};
 
 	// Updates the balance on the page
 	document.getElementById('balance').innerText = `$${balance}`;
 
-	// Display transaciton notification
+	// Display transaction notification
 	showNotification(`Succesfully ${mode === 'deposit' ? 'deposited' : 'withdrew'} $${value}.`, 'success');
+
+	// Add the transaction to the history list
+	addTransaction(value, mode);
 
 	// Clear the cash input
 	inputElement.value = '';
