@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revisit Dynamic Profile Card Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<section id="profile-card">
+			<img id="user-profile-picture" src="./images/shrek.jpg" alt="Profile image">
+			<h2 id="user-name">Edwin</h2>
+			<p id="user-bio">Biogesic</p>
+		</section>
+
+		<form id="update-form">
+			<label for="update-name">Update Name:</label>
+			<input type="text" id="update-name">
+
+			<label for="update-bio">Update Bio:</label>
+			<input type="text" id="update-bio">
+
+			<label for="update-image-url">Update Image URL:</label>
+			<input type="text" id="update-image-url">
+
+			<label for="update-background-color">Update Background Color:</label>
+			<input type="color" id="update-background-color">
+
+			<button id="update-button">Update Profile Card</button>
+		</form>
+	</main>
+
+	<script src="./script.js"></script>
+</body>
+</html>
