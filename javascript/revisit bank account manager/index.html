@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revisit Bank Account Manager</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Revisit Bank Account Manager</h1>
+
+	<main>
+		<section class="balance-control-container">
+			<h3>Current balance: <span id="balance">$0</span></h3>
+			<form id="bank-form">
+				<input id="cash-input" type="number" id="ammount-input" placeholder="Enter ammount">
+
+				<div class="button-container">
+					<button id="deposit">Deposit</button>
+					<button id="withdraw">Withdraw</button>
+				</div>
+			</form>
+
+			<p id="notification"></p>
+		</section>
+
+		<section class="history-container">
+			<h2>Transaction History</h2>
+
+			<ul>
+				<li>Deposit: $100</li>
+				<li>Withdraw: $300</li>
+				<li>Deposit: $100</li>
+				<li>Withdraw: $300</li>
+			</ul>
+		</section>
+	</main>
+	
+	<script src="script.js"></script>
+</body>
+</html>
