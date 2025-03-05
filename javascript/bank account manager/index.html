@@ -10,17 +10,17 @@
 	<h1>Bank Account Manager</h1>
 
 	<main>
-		<h2>Current balance: <span>$0</span></h2>
-		<form>
-			<input type="number" id="ammount-input">
+		<h2>Current balance: <span id="balance">$0</span></h2>
+		<form id="bank-form">
+			<input id="cash-input" type="number" id="ammount-input" placeholder="Enter ammount">
 
 			<div class="button-container">
-				<button>Deposit</button>
-				<button>Withdraw</button>
+				<button id="deposit">Deposit</button>
+				<button id="withdraw">Withdraw</button>
 			</div>
 		</form>
 
-		<p id="notification">Succesfully withdrew $2000</p>
+		<p id="notification"></p>
 	</main>
 	
 	<script src="script.js"></script>
