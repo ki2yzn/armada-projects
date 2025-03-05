@@ -10,21 +10,19 @@
 	<main>
 		<h1>My To-Do List</h1>
 
-		<form>
+		<form id="task-form">
 			<input type="text" class="task-name-input" name="task-name-input" placeholder="Enter your task here...">
-			<input type="submit" class="add-task" value="Add Task">
+			<input onclick="addTask()" type="submit" class="add-task" value="Add Task">
 		</form>
 
 		<ul class="tasks-container">
-			<li>
+			<!-- <li>
 				Learn CSS
-				<button>Remove</button>
-			</li>
-			<li>
-				Learn CSS
-				<button>Remove</button>
-			</li>
+				<button onclick="removeTask()">Remove</button>
+			</li> -->
 		</ul>
 	</main>
+
+	<script src="script.js"></script>
 </body>
 </html>
