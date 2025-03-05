@@ -26,7 +26,7 @@ function showNotification(content) {
 	notificationElement.style.display = 'flex';
 
 	// Clear previous existing timeouts
-	clearTimeout(timeoutId);
+	clearTimeout(timeoutId)
 
 	// Automatically hide the notification after 5 secs
 	timeoutId = setTimeout(() => {
@@ -58,7 +58,17 @@ function addTask() {
 	taskElement.id = `task${count}`;
 
 	// Add remove button for the task
-	taskElement.innerHTML = `${taskInput.value} <button onclick="removeTask(${taskElement.id}, '${taskInput.value}')">Remove</button>`;
+	taskElement.innerHTML = `
+		<p>${taskInput.value}</p> 
+		<button onclick="removeTask(${taskElement.id}, '${taskInput.value}')">
+			Remove
+		</button>
+	`;
+
+	// Add event listener to the task so it can be toggled as complete
+	taskElement.addEventListener('click', () => {
+		taskElement.classList.toggle('complete');
+	});
 
 	// Insert the task to the container
 	taskContainer.appendChild(taskElement);

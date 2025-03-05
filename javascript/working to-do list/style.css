@@ -80,9 +80,9 @@ ul li {
 	justify-content: space-between;
 }
 
-ul li:hover {
+/* ul li:hover {
 	background-color: #f4f4f4;
-}
+} */
 
 li button {
 	color: white;
@@ -99,6 +99,9 @@ li button:hover {
 
 .complete {
 	background-color: #a9d08e;
+}
+
+.complete p {
 	text-decoration: line-through;
 }
 
@@ -125,4 +128,5 @@ li button:hover {
 	color: red;
 	cursor: pointer;
 	font-weight: 600;
+	text-decoration: none;
 }
