@@ -13,6 +13,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 
 main {
@@ -55,7 +56,6 @@ form {
 
 .add-task {
 	cursor: pointer;
-	outline: none;
 	border: none;
 	border-radius: 0 5px 5px 0;
 	padding: 0 30px;
@@ -100,4 +100,29 @@ li button:hover {
 .complete {
 	background-color: #a9d08e;
 	text-decoration: line-through;
+}
+
+#notification {
+	text-align: center;
+	width: 100%;
+	max-width: 480px;
+	position: absolute;
+	background-color: #a9d08e;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+}
+
+#notification button {
+	background-color: transparent;
+	border: none;
+	font-size: 1rem;
+	color: red;
+	cursor: pointer;
+	font-weight: 600;
 }
