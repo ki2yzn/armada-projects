@@ -16,20 +16,22 @@ const zeus = {
 	}
 };
 
-const isEarlyWin = false;
-
-function showDamage(firstCharacter, secondCharacter, damage) {
-	console.log(`${firstCharacter.name} attacks ${secondCharacter.name} and does ${damage} damage!`)
+// Display damage dealt by a character
+function showDamage(attacker, defender, damage) {
+	console.log(`${attacker.name} attacks ${defender.name} and does ${damage} damage!`)
 }
 
+// Update the hp property of a character
 function updateHP(character, damage) {
 	character.hp = character.hp - damage; 
 }
 
+// Display the hp of a character
 function showHP() {
 	console.log(`Thor HP: ${thor.hp} | Zeus HP: ${zeus.hp}`);
 }
 
+// Display the winner between zeus and thor by comparing their hp
 function showWinner() {
 	if(thor.hp !== zeus.hp) {
 		console.log(`\n🏆 ${thor.hp > zeus.hp ? thor.name : zeus.name} WINS the battle! 🏆`)
@@ -38,6 +40,7 @@ function showWinner() {
 	}
 }
 
+// Check if a character drops their hp to less than or equal to 0
 function isThereKO(character) {
 	if(character.hp <= 0) {
 		return true;
@@ -46,24 +49,25 @@ function isThereKO(character) {
 	return false;
 }
 
+// Simulate the battle using for loops
 for(let i = 1; i <= 10; i++) {
 	console.log(`=== Round ${i} === `);
 
-	const thorDamage = thor.attack();
-	showDamage(thor, zeus, thorDamage);
-	updateHP(zeus, thorDamage);
-	showHP();
+	const thorDamage = thor.attack(); // Calculate the damage
+	showDamage(thor, zeus, thorDamage); // Display the damage
+	updateHP(zeus, thorDamage); // Update the hp property of the character
+	showHP(); // Display the hp
 	if(isThereKO(zeus)) break; // Stops the loop if Zeus' hp reached below or equal to 0.
 
 	console.log();
 
-	const zeusDamage = zeus.attack();
-	showDamage(zeus, thor, zeusDamage);
-	updateHP(thor, zeusDamage);
-	showHP();
+	const zeusDamage = zeus.attack(); // Calculate the damage
+	showDamage(zeus, thor, zeusDamage); // Display the damage
+	updateHP(thor, zeusDamage); // Update the hp property of the character
+	showHP(); // Display the hp
 	if(isThereKO(thor)) break; // Stops the loop if Thor's hp reached below or equal to 0.
 
-	console.log('\n----------\n');
+	console.log('\n--------------------\n');
 }
 
 showWinner();
