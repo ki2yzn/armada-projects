@@ -4,6 +4,8 @@ document.getElementById('bank-form').addEventListener('submit', (event) => {
 });
 
 let balance = 0;
+let withdrewAmmount = 0;
+const dailyWithdrawLimit = 500;
 const inputElement = document.getElementById('cash-input');
 
 // Display notification by modifying the notification element
@@ -25,16 +27,29 @@ function doTransaction(mode) {
 		case 'deposit':
 			balance += value;
 			break;
+
 		case 'withdraw':
+			// Check if balance is enough
 			if(value <= balance && balance > 0) {
+				// Check if daily limit has been reached. Stop the transaction if true
+				if((withdrewAmmount + value) > dailyWithdrawLimit) {
+					showNotification('Daily withdraw limit reached!', 'fail');
+					inputElement.value = ''; //Clear the cash input
+					return;
+				}
+
+				withdrewAmmount += value;
 				balance -= value;
-			} else {
+			} 
+			
+			else {
 				// If balance is insufficient, show notification and stop the code here
 				showNotification('Insufficient balance!', 'fail');
 				inputElement.value = ''; //Clear the cash input
 				return;
 			}
 			break;
+
 		default:
 			console.log('Invalid mode!');
 	};
@@ -47,6 +62,8 @@ function doTransaction(mode) {
 
 	// Clear the cash input
 	inputElement.value = '';
+
+	console.log(withdrewAmmount);
 };
 
 // Add event listener for the deposit button
