@@ -23,8 +23,16 @@ function doTransaction(mode) {
 	
 	switch(mode) {
 		case 'deposit':
-			balance += value;
+			if(value > 0) {
+				balance += value;
+			} else {
+				console.log(value);
+				showNotification('Invalid deposit ammount!', 'fail');
+				return;
+			}
+
 			break;
+			
 		case 'withdraw':
 			if(value <= balance && balance > 0) {
 				balance -= value;
@@ -35,6 +43,7 @@ function doTransaction(mode) {
 				return;
 			}
 			break;
+
 		default:
 			console.log('Invalid mode!');
 	};

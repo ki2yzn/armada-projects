@@ -46,7 +46,14 @@ function doTransaction(mode) {
 	
 	switch(mode) {
 		case 'deposit':
-			balance += value;
+			if(value > 0) {
+				balance += value;
+			} else {
+				console.log(value);
+				showNotification('Invalid deposit ammount!', 'fail');
+				return;
+			}
+
 			break;
 
 		case 'withdraw':

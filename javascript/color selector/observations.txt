@@ -1,0 +1,19 @@
+Here are my observations to the code provided in this task
+
+1. Before doing any modifications
+	- Clicking any of the button inside the container triggers the event on both the button  and container.
+	- Clicking the button also does not change the container's color despite having a line of code dedicated for the intended behavior.
+
+2. After doing modifications
+	- By uncommenting event.stopPropagation, the container's event no longer gets triggered when any of it's child's events are triggered. It seems like by adding event.stopPropagation, the events of child elements become independent of their parent's.
+	- The container's background color can now be changed dynamically by pressing the color buttons.
+
+3. What are the changes?
+	- Uncommented event.stopPropagation()
+	- Replaced the code for changing background color.
+	- Before (Does not work as intended):
+		- document.getElementById("container").style.backgroundColor = this.style.backgroundColor;
+	- After (Works as intended): 
+		- const bgColor = window.getComputedStyle(this).backgroundColor;
+		document.getElementById("container").style.backgroundColor = bgColor;
+	 
