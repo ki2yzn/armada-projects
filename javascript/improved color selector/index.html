@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        #container {
+            width: 300px;
+            max-height: 500px;
+            background-color: lightgray;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        .color-box {
+            width: 120px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+		.yellow { background-color: yellow; color: black; }
+        .purple { background-color: purple; }
+        .orange { background-color: orange; }
+        .aquamarine { background-color: aquamarine; color: black; }
+        .dark-olive { background-color: darkolivegreen; }
+
+        #selected-color {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .selected-border {
+            border: 3px solid #f0d153;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color Selector</h1>
+    <p>Click a color to change the background.</p>
+    <div id="container">
+        <div>
+            <button class="color-box red">Red</button>
+            <button class="color-box blue">Blue</button>
+        </div>
+        
+        <button class="color-box green">Green</button>
+
+        <div>   
+            <button class="color-box orange">Orange</button>
+            <button class="color-box purple">Purple</button>
+        </div>
+		
+        <button class="color-box yellow">Yellow</button>
+
+        <div>   
+            <button class="color-box aquamarine">Aquamarine</button>
+            <button class="color-box dark-olive">Dark Olive</button>
+        </div>
+    </div>
+
+    <p id="selected-color">Selected: Color None</p>
+
+    <script>
+        document.getElementById("container").addEventListener("click", function() {
+            alert("You clicked the container!");
+
+            // "this" refers to the element that triggered the event (in this case, 				#container)
+            this.style.backgroundColor = "lightgray"; 
+        });
+
+        document.querySelectorAll(".color-box").forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.stopPropagation();
+
+                // Set bg color of box container
+				const bgColor = window.getComputedStyle(this).backgroundColor;
+                document.getElementById("container").style.backgroundColor = bgColor;
+
+                // Set bg color of the body
+                document.querySelector('body').style.backgroundColor = bgColor;
+
+                // Remove border from previous buttons
+                document.querySelectorAll(".color-box").forEach(button => {
+                    button.classList.remove('selected-border');
+                })
+
+                // Add border to the selected button
+                this.classList.add('selected-border');
+
+                // Update the text for selected color
+                document.getElementById('selected-color').textContent = `Selected color: ${this.textContent}`;
+
+                // Update the text color
+                let textColor = 'black';
+                if(this.textContent === 'Red' || this.textContent === 'Blue' || this.textContent === 'Green' || this.textContent === 'Purple' || this.textContent === 'Dark Olive') {
+                    textColor = 'white';
+                }
+
+                document.querySelectorAll('p').forEach(p => {
+                    p.style.color = textColor;
+                });
+
+                document.querySelector('h1').style.color = textColor;
+            });
+        });
+    </script>
+
+</body>
+</html>
