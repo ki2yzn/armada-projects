@@ -23,11 +23,6 @@ const names = [
 	"Dante"
 ];
 
-// Generates random index up to a given max value
-function getRandomIndex(maxValue) {
-	return Math.floor(Math.random() * maxValue)
-}
-
 // Manually defining a character object
 const character = {
 	name: 'Hero',
@@ -42,6 +37,11 @@ const character = {
 	specialAbility: specialAbilities[getRandomIndex(specialAbilities.length)],
 };
 
+// Generates random index up to a given max value
+function getRandomIndex(maxValue) {
+	return Math.floor(Math.random() * maxValue)
+}
+
 // Returns a single random character
 function generateCharacter(name) {
 	return {
@@ -50,14 +50,14 @@ function generateCharacter(name) {
 		health: Math.floor(Math.random() * (151 - 50) + 50),
 		specialAbility: specialAbilities[getRandomIndex(specialAbilities.length)],
 
-		battle: function(otherCharacter) {
+		battle: function(defender) {
 			// Set a random damage from 5 to 20 
 			const damage = Math.floor(Math.random() * (21 - 5) + 5);
-			const updatedHealth = otherCharacter.health - damage;
+			const updatedHealth = defender.health - damage;
 
-			console.log(`Character ${this.name} attacked Character ${otherCharacter.name} with ${this.specialAbility}. ${otherCharacter.name}'s health dropped from ${otherCharacter.health} to ${updatedHealth}.`);
+			console.log(`Character ${this.name} attacked Character ${defender.name} with ${this.specialAbility}. ${defender.name}'s health dropped from ${defender.health} to ${updatedHealth}.`);
 
-			otherCharacter.health = updatedHealth;
+			defender.health = updatedHealth;
 		}
 	};
 }
@@ -74,22 +74,22 @@ function generateMultipleCharacters(count) {
 
 	return charactersArr;
 }
-
-// Display the character object with randomized health
+// ``
+// Display the manually created character object with randomized health
 character.randomizeHealth();
 console.log(character);
 
 // Create a random character named 'Drake'
 const drake = generateCharacter('Drake');
-console.log(drake);
+console.log(drake );
 
 // Create a random character with no defined name
 const randomCharacter = generateCharacter();
-console.log(randomCharacter);
+console.log(randomCharacter );
 
 // Drake attacks Random Character & Vice-versa
 drake.battle(randomCharacter);
-randomCharacter.battle(drake);
+randomCharacter.battle(drake );
 
 // Display updated info about Drake and Random Character
 console.log(drake);
