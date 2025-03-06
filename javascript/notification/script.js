@@ -6,7 +6,7 @@ function removeNotification(notificationID) {
 	const notification = document.getElementById(notificationID);
 	notification.remove();
 };
-
+	
 function addNotification() {
 	// Create the notification element
 	const notification = document.createElement('p');
