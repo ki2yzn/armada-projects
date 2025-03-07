@@ -1,12 +1,12 @@
-// Disable default form submit behavior
-document.getElementById('bank-form').addEventListener('submit', (event) => {
-	event.preventDefault();
-});
-
 let balance = 0;
 let withdrewAmmount = 0;
 const dailyWithdrawLimit = 500;
 const inputElement = document.getElementById('cash-input');
+
+// Disable default form submit behavior
+document.getElementById('bank-form').addEventListener('submit', (event) => {
+	event.preventDefault();
+});
 
 // Display notification by modifying the notification element
 function showNotification(content, result) {
@@ -34,7 +34,6 @@ function addTransaction(value, mode) {
 		transactionHistory.appendChild(transaction);
 	} else {
 		const reference = document.querySelector('.transaction');
-		console.log(reference);
 		transactionHistory.insertBefore(transaction, reference);
 	}
 };
@@ -58,7 +57,7 @@ function doTransaction(mode) {
 
 		case 'withdraw':
 			// Check if balance is enough
-			if(value <= balance && balance > 0) {
+			if((value <= balance && value > 0) && balance > 0) {
 				// Check if daily limit has been reached. Stop the transaction if true
 				if((withdrewAmmount + value) > dailyWithdrawLimit) {
 					showNotification('Daily withdraw limit reached!', 'fail');
@@ -68,7 +67,15 @@ function doTransaction(mode) {
 
 				withdrewAmmount += value;
 				balance -= value;
+				
 			} 
+
+			// Prevents invalid withdraw ammount
+			else if(value <= 0 || !value) {
+				showNotification('Invalid withdraw ammount!', 'fail');
+				inputElement.value = ''; //Clear the cash input
+				return;
+			}
 			
 			else {
 				// If balance is insufficient, show notification and stop the code here
@@ -76,6 +83,7 @@ function doTransaction(mode) {
 				inputElement.value = ''; //Clear the cash input
 				return;
 			}
+			
 			break;
 
 		default:

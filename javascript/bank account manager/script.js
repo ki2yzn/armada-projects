@@ -1,10 +1,9 @@
+let balance = 0;
+
 // Disable default form submit behavior
 document.getElementById('bank-form').addEventListener('submit', (event) => {
 	event.preventDefault();
 });
-
-let balance = 0;
-const inputElement = document.getElementById('cash-input');
 
 // Display notification by modifying the notification element
 function showNotification(content, result) {
@@ -19,6 +18,7 @@ function showNotification(content, result) {
 // Deposit value by incrementing the balance 
 function doTransaction(mode) {
 	// Get the value of the cash input
+	const inputElement = document.getElementById('cash-input');
 	const value = Number(inputElement.value);
 	
 	switch(mode) {
