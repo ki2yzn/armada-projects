@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+main {
+	max-width: 500px;
+	border: 1px solid black;
+	padding: 24px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.applied-armor {
+	display: flex;
+	flex-direction: column;
+	line-height: 0;
+	position: relative;
+	height: 200px;
+}
+
+.applied-armor img {
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+}
+
+.applied-armor :nth-child(1) {
+	top: 0px;
+}
+
+.applied-armor :nth-child(2) {
+	top: 25px;
+}
+
+.applied-armor :nth-child(3) {
+	top: 65px;
+}
+
+.applied-armor :nth-child(4) {
+	top: 100px;
+}
+
+img {
+	width: 50px;
+}
+
+.inventory {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.item-selection h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.item-selection ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.item-button {
+	cursor: pointer;
+	background-color: transparent;
+	padding: 5px;
+	border: none;
+	border: 5px dashed transparent;
+}
+
+.item-button:hover,
+.selected {
+	border: 5px dashed #74d600;
+}
+
+.apply-button {
+	cursor: pointer;
+	padding: 10px 50px;
+}
