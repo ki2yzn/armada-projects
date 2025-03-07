@@ -34,9 +34,17 @@ function doTransaction(mode) {
 			break;
 			
 		case 'withdraw':
-			if(value <= balance && balance > 0) {
+			if((value <= balance && value > 0) && balance > 0) {
 				balance -= value;
-			} else {
+			} 
+			
+			else if(value <= 0) {
+				showNotification('Invalid withdraw ammount!', 'fail');
+				inputElement.value = ''; //Clear the cash input
+				return;
+			}
+			
+			else {
 				// If balance is insufficient, show notification and stop the code here
 				showNotification('Insufficient balance!', 'fail');
 				inputElement.value = ''; //Clear the cash input
