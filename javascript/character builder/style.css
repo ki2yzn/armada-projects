@@ -88,7 +88,7 @@ img {
 	border: 5px dashed #74d600;
 }
 
-.apply-button {
+#apply-button {
 	cursor: pointer;
 	padding: 10px 50px;
 }

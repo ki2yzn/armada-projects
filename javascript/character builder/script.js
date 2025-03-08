@@ -3,6 +3,11 @@ const chestPlateContainer = document.getElementById('chestplate-container');
 const leggingsContainer = document.getElementById('leggings-container');
 const bootsContainer = document.getElementById('boots-container');
 
+const previewHelmet = document.getElementById('preview-helmet');
+const previewChestplate = document.getElementById('preview-chestplate');
+const previewLeggings = document.getElementById('preview-leggings');
+const previewBoots = document.getElementById('preview-boots');
+
 const armor = {
 	helmet: [
 		'Arctic_Hood.png',
@@ -100,41 +105,60 @@ armor.boots.forEach(item => {
 });
 bootsContainer.innerHTML = bootsElements;
 
-/* Add event listeners to the armor item buttons */
+/* Add event listeners to the armor items */
 document.querySelectorAll('.item-button').forEach(button => {
 	button.addEventListener('click', function() {
 		const itemSrc = this.getAttribute('data-src');
 		const itemType = this.getAttribute('data-type');
 
-		console.log(itemSrc);
-		console.log(itemType);
+		// console.log(itemSrc);
+		// console.log(itemType);
 
-		// Remove border from previous selected items
+		// Update the selectedArmor object
 		let containerID;
 		switch(itemType) {
 			case 'helmet':
 				containerID = 'helmet-container'
+				selectedArmor.helmet = itemSrc;
 				break;
 			case 'chestplate':
 				containerID = 'chestplate-container'
+				selectedArmor.chestplate = itemSrc;
 				break;
 			case 'leggings':
 				containerID = 'leggings-container'
+				selectedArmor.leggings = itemSrc;
 				break;
 			case 'boots':
 				containerID = 'boots-container'
+				selectedArmor.boots = itemSrc;
 				break;
 			default:
 				containerID = null;
 		};
 
+		// Remove border from previous selected items
 		document.getElementById(containerID).querySelectorAll('.item-button').forEach(item => {
 			item.classList.remove('selected');
 		});
 
-		// Apply the border 
+		// Apply the border to the new selected item  
 		this.classList.add('selected');
-
-		// Update the selected armor object
 	});
+});
+
+// Apply the selected armor to the armor preview
+document.getElementById('apply-button').addEventListener('click', function() {
+	// Prompt the user to lock the build that they selected
+	const userConfirmed = confirm('Are you sure you want to lock this build?');
+
+	if(!userConfirmed) {
+		return
+	} else {
+		const path = './images/';	
+		previewHelmet.src = path + selectedArmor.helmet;
+		previewChestplate.src = path + selectedArmor.chestplate;
+		previewLeggings.src = path + selectedArmor.leggings;
+		previewBoots.src = path + selectedArmor.boots;
+	};
 });
