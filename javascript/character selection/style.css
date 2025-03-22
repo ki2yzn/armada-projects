@@ -71,3 +71,20 @@ h1 {
 	border-radius: 2rem;
 	letter-spacing: 2px;
 }
+
+.selected {
+	border: 15px dashed #f7cd00;
+	animation: fade-border 1s infinite;
+}
+
+@keyframes fade-border {
+
+	0%,
+	100% {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: #f7cd00;
+	}
+}

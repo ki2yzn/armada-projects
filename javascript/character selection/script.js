@@ -14,5 +14,12 @@ characters.forEach(character => {
 
 		/* Update the character name */
 		characterName.innerText = newName;
+
+		/* Apply selected character effect 
+			- Remove effect on previously selected character.
+			- Apply the effect on selected character		
+		*/
+		characters.forEach(character => character.classList.remove("selected"));
+		this.classList.add("selected");
 	});
 });
